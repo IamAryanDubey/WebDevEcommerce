@@ -1,68 +1,172 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    font-family: "Poppins", serif;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+}
+.flexCol{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header{
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+.logo{
+    margin-left: 5vw;
 }
-a:hover {
-  color: #535bf2;
+header svg{
+    height: 40px;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+#burger-menu {
+    cursor: pointer;
+    height: 29px;
+    width: 40px;
+    margin: 0 5vw;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
   }
-  a:hover {
-    color: #747bff;
+  
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    display: block;
+    height: 5px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    background: #FF1E00;
+  
   }
-  button {
-    background-color: #f9f9f9;
+  
+  
+  
+  #burger-menu span:before,
+  #burger-menu span:after {
+    content: "";
   }
-}
+  
+  #burger-menu span {
+    right: 0px;
+    top: 13px;
+    width: 40px;
+  }
+  
+  #burger-menu span:before {
+    left: 0px;
+    top: -12px;
+    width: 29px;
+  }
+  
+  #burger-menu span:after {
+    left: 0px;
+    top: 12px;
+    width: 33px;
+  }
+  
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 40px;
+  }
+  
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 40px;
+  }
+  
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+  }
+  
+  #menu {
+    right: 0;
+    z-index: 1;
+    min-width: 50%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #menu.overlay {
+    visibility: visible;
+    opacity: 0.95;
+  
+    background: #1E1E1E;
+  }
+  
+  #menu li {
+    list-style: none;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+  
+  }
+  .cart-menu{
+    display: flex;
+  }
+
+
+
+
+  .ItemsContainer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1vw;
+    width: 80vw;
+    margin: 0 auto;
+    
+  }
+
+  .itemCard{
+    padding: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .itemCard img{
+    border-radius: 0;
+    width: 100%;
+  }
+  .ItemsDetails{
+    padding: 12px 15px ;
+  }
+  .cardPrice{
+    color: #333;
+    font-family: 22px;
+    font-weight: bold;
+    line-height: 1.2em;
+  }
+  .cardTitle{
+    font-size: 18px;
+  }
+
+  .PicturesCarousel{
+    width: 85%;
+    margin: 0 auto;
+  }
+  .imageWrapper{
+    width: 75%;
+    aspect-ratio: 16/9;
+    background-color: black;
+    margin: 0 auto;
+  }
+  .imageWrapper img{
+    height: 100%;
+    margin: 0 auto;
+  }

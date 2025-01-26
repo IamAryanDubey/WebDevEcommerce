@@ -1,0 +1,94 @@
+[
+    {
+      "id": 1,
+      "title": "Apple iPhone 14 Pro",
+      "brand": "Apple",
+      "price": 999,
+      "ram": "6GB",
+      "screen_size": "6.1 inches",
+      "camera": "48MP + 12MP + 12MP",
+      "battery": "3200mAh",
+      "os": "iOS 16",
+      "platform": "iOS",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S23 Ultra",
+      "brand": "Samsung",
+      "price": 1199,
+      "ram": "12GB",
+      "screen_size": "6.8 inches",
+      "camera": "200MP + 12MP + 10MP",
+      "battery": "5000mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 3,
+      "title": "Google Pixel 7 Pro",
+      "brand": "Google",
+      "price": 899,
+      "ram": "12GB",
+      "screen_size": "6.7 inches",
+      "camera": "50MP + 12MP + 48MP",
+      "battery": "5000mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 4,
+      "title": "OnePlus 11",
+      "brand": "OnePlus",
+      "price": 699,
+      "ram": "16GB",
+      "screen_size": "6.7 inches",
+      "camera": "50MP + 48MP + 32MP",
+      "battery": "5000mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 5,
+      "title": "Google Pixel 6a",
+      "brand": "Google",
+      "price": 449,
+      "ram": "6GB",
+      "screen_size": "6.1 inches",
+      "camera": "12.2MP + 12MP",
+      "battery": "4410mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 6,
+      "title": "Motorola Edge 30 Ultra",
+      "brand": "Motorola",
+      "price": 899,
+      "ram": "12GB",
+      "screen_size": "6.67 inches",
+      "camera": "200MP + 50MP + 12MP",
+      "battery": "4610mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+
+    },
+    {
+      "id": 7,
+      "title": "Asus ROG Phone 6 Pro",
+      "brand": "Asus",
+      "price": 1099,
+      "ram": "18GB",
+      "screen_size": "6.78 inches",
+      "camera": "50MP + 13MP + 5MP",
+      "battery": "6000mAh",
+      "os": "Android",
+      "pictures": ["/ItemPic.png", "/image.png"]
+    }
+  ]
+  
