@@ -7,13 +7,27 @@ import 'swiper/css';
 import { Navigation, Pagination, A11y } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Link } from 'react-router-dom';
 
 const ItemPage = () => {
   const { id } = useParams();
   const item = db.find(item => item.id === parseInt(id));
 
   const filteredKeys = Object.keys(item).filter(key => key !== 'id' && key !== 'pictures' && key !== 'sellerId' && key !== 'searchKeywords' && key !== 'datePosted' && key !== 'negotiable' && key !== 'price' && key !== 'title' && key !== 'itemType' && key !== 'electronicsType');
+
+// Updated ItemPage.js to add to cart functionality
+const handleAddToCart = (item) => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find(cartItem => cartItem.id === item.id);
+
+  if (existingItem) {
+    existingItem.quantity += 1;
+  } else {
+    cart.push({ ...item, quantity: 1 });
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  alert('Item added to cart!');
+};
 
 
   
@@ -53,22 +67,26 @@ const ItemPage = () => {
       
     </div>
 
-      <div className='DescriptionBlocks py-[3vw]'>
-        <div className='flex w-[80vw] md:w-[68vw] mx-auto justify-between gap-[2vw] md:gap-[1vw]'>
-          <div className='infoBlock  w-full'> 
+      <div className='descriptionBlocks'>
+        <div className='priceandbtn flex w-[80vw] md:w-[68vw] mx-auto justify-between gap-[2vw] md:gap-[1vw]'>
+          <div className='infoBlock itemTitle'> 
             <h2 className='font-bold text-primary text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px]'>{item.title}</h2>
           </div>
           <div className='infoBlock '> 
             <div className='flexCol h-full'>
               <h2 className='flex text-nowrap font-bold text-[26px] sm:text-[30px] lg:text-[36px] xl:text-[44px]'>$ {item.price}
               </h2>
-              
+              <button 
+                type="button" 
+                onClick={() => handleAddToCart(item)} 
+                className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark"
+              >Add to Cart</button>
             </div>
           </div>
         </div>
 
-        <div className='sm:flex w-[80vw] md:w-[68vw] mx-auto justify-between gap-[2vw] md:gap-[1vw] mt-[2vw] md:mt-[1vw]'>
-          <div className='infoBlock w-full h-fit'> 
+        <div className=''>
+          <div className='infoBlock decriptionBlock'> 
             <h2 className='font-bold text-[18px] sm:text-[24px] md:text-[30px]'>Description</h2>
             <div className=''>
               {filteredKeys.map(key => (
@@ -87,3 +105,5 @@ const ItemPage = () => {
 };
 
 export default ItemPage;
+
+

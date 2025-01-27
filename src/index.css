@@ -138,6 +138,11 @@ header svg{
     border-radius: 6px;
     overflow: hidden;
     width: 100%;
+    box-shadow: 0px 0px 6px 1px #CFCFCF;
+
+  }
+  .itemCard a{
+    text-decoration: none;
   }
   .itemCard img{
     border-radius: 0;
@@ -151,9 +156,14 @@ header svg{
     font-family: 22px;
     font-weight: bold;
     line-height: 1.2em;
+    margin: 0;
   }
   .cardTitle{
-    font-size: 18px;
+    font-size: 15px;
+    color: #9c9c9c;
+    font-weight: 300;
+    margin: 0;
+
   }
 
   .PicturesCarousel{
@@ -165,8 +175,73 @@ header svg{
     aspect-ratio: 16/9;
     background-color: black;
     margin: 0 auto;
+    overflow: hidden;
   }
   .imageWrapper img{
     height: 100%;
     margin: 0 auto;
+  }
+  .descriptionBlocks{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .priceandbtn{
+    display: flex;
+    justify-content: space-between;
+    gap: 1vw;
+
+  }
+.itemTitle{
+  width: 100%;
+}
+  .infoBlock{
+    text-wrap: nowrap;
+    /* Rectangle 34 */
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    padding: 3vw 4vw;
+    box-shadow: 0px 0px 6px 1px #CFCFCF;
+  
+  }
+  .decriptionBlock{
+    margin-top: 1vw;
+  }
+
+
+  .cartFlex{
+    gap: 1vw;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .cartList{
+    width: 100%;
+  }
+  .cartTotals{
+    height: fit-content;
+  }
+  .cartTitlePrice{
+    display: flex;
+    justify-content: space-between;
+  }
+  .quantityInput{
+    padding: 5px 5px;
+    border: 1px solid #cdcdcd;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .removeItem{
+    border: none;
+    background-color: red;
+    border-radius: 50px;
+  }
+  .removeItem svg{
+    height: 20px;
+  }
+  .quantityRemove{
+    display: flex;
+    justify-content: end;
   }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import ItemsContainer from '../components/Itemscontainer'
+import ItemsContainer from '../components/ItemsContainer'
 import db from '../components/db.json';
 
 const Homepage = () => {
