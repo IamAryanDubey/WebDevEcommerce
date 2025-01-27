@@ -29,12 +29,12 @@ const Header = () => {
         </div>
         </div>
         <div id="menu" ref={overlayRef}>
-          <ul className="text-[white] px-[10vw] pt-[18vh] text-[48px] text-left">
-            <li className='leading-[2em]'><Link to="/Search/Apple">Apple</Link></li>
-            <li className='leading-[2em]'><Link to="/Search/Samsung">Samsung</Link></li>
-            <li className='leading-[2em]'><Link to="/Search/Google">Google</Link></li>
-            <li className='leading-[2em]'><Link to="/Search/iOS">iOS</Link></li>
-            <li className='leading-[2em]'><Link to="/Search/Android">Android</Link></li>
+          <ul className="">
+            <li className=''><Link to="/Search/Apple">Apple</Link></li>
+            <li className=''><Link to="/Search/Samsung">Samsung</Link></li>
+            <li className=''><Link to="/Search/Google">Google</Link></li>
+            <li className=''><Link to="/Search/iOS">iOS</Link></li>
+            <li className=''><Link to="/Search/Android">Android</Link></li>
 
 
           </ul>

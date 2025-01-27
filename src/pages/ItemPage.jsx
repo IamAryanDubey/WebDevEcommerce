@@ -12,7 +12,7 @@ const ItemPage = () => {
   const { id } = useParams();
   const item = db.find(item => item.id === parseInt(id));
 
-  const filteredKeys = Object.keys(item).filter(key => key !== 'id' && key !== 'pictures' && key !== 'sellerId' && key !== 'searchKeywords' && key !== 'datePosted' && key !== 'negotiable' && key !== 'price' && key !== 'title' && key !== 'itemType' && key !== 'electronicsType');
+  const filteredKeys = Object.keys(item).filter(key => key !== 'id' && key !== 'pictures' && key !== 'price' && key !== 'title');
 
 // Updated ItemPage.js to add to cart functionality
 const handleAddToCart = (item) => {
@@ -68,18 +68,18 @@ const handleAddToCart = (item) => {
     </div>
 
       <div className='descriptionBlocks'>
-        <div className='priceandbtn flex w-[80vw] md:w-[68vw] mx-auto justify-between gap-[2vw] md:gap-[1vw]'>
+        <div className='priceandbtn'>
           <div className='infoBlock itemTitle'> 
-            <h2 className='font-bold text-primary text-[18px] sm:text-[24px] md:text-[30px] lg:text-[36px]'>{item.title}</h2>
+            <h2 className=''>{item.title}</h2>
           </div>
           <div className='infoBlock '> 
             <div className='flexCol h-full'>
-              <h2 className='flex text-nowrap font-bold text-[26px] sm:text-[30px] lg:text-[36px] xl:text-[44px]'>$ {item.price}
+              <h2 className='flex '>$ {item.price}
               </h2>
               <button 
                 type="button" 
                 onClick={() => handleAddToCart(item)} 
-                className="bg-primary text-white px-4 py-2 rounded-md hover:bg-primary-dark"
+                className=""
               >Add to Cart</button>
             </div>
           </div>
@@ -87,10 +87,10 @@ const handleAddToCart = (item) => {
 
         <div className=''>
           <div className='infoBlock decriptionBlock'> 
-            <h2 className='font-bold text-[18px] sm:text-[24px] md:text-[30px]'>Description</h2>
+            <h2 className='font-bold'>Description</h2>
             <div className=''>
               {filteredKeys.map(key => (
-                <p key={key}><span className='font-semibold text-[14px] sm:text-[16px] sm:text-[20px] '>
+                <p key={key}><span className=''>
                   {key.replace(/_/g, ' ').replace(/\w\S*/g, (w) => (w.replace(/^\w/, (c) => c.toUpperCase())))}</span>: {item[key]}
                 </p>
               ))}

@@ -26,7 +26,7 @@ const Cart = () => {
 
   return (
     <div className=''>
-      <h1 className='text-2xl font-bold mb-4'>Your Cart</h1>
+      <h1 className=''>Your Cart</h1>
       {cartItems.length > 0 ? (
         <div className='cartFlex'>
             <div className='infoBlock cartList'>
@@ -35,7 +35,7 @@ const Cart = () => {
                 <div className='cartTitlePrice'>
               <h2 className=''>{item.title}</h2>
               <div className='flexCol'>
-              <p className='mt-2'>${calculateSubTotal(item.price, item.quantity)}</p>
+              <p className=''>${calculateSubTotal(item.price, item.quantity)}</p>
               </div>
               </div>
               <div className='quantityRemove'>
